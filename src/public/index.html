@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b44">
+  <meta name="description" content="Painel de controle financeiro pessoal com foco em consumo consciente.">
+  <title>Clareza | Minha saúde financeira</title>
+  <link rel="stylesheet" href="./assets/css/estilos.css">
+  <script type="module" src="./assets/js/dashboard.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="marca" href="./index.html" aria-label="Clareza - Página inicial"><span class="marca-simbolo" aria-hidden="true">C.</span><span>clareza<span class="marca-ponto">.</span></span></a>
+      <a class="nav-pill" href="./nova-transacao.html"><span aria-hidden="true">＋</span> Nova transação</a>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="titulo">
+        <div class="hero-cabecalho"><span class="etiqueta">CONTROLE FINANCEIRO PESSOAL</span><span class="hero-tag">Seu espaço de organização</span></div>
+        <h1 id="titulo">Seu dinheiro,<br><em>com mais clareza.</em></h1>
+        <p>Saiba quanto entra, quanto sai e o que pode melhorar. Pequenas escolhas criam grandes mudanças.</p>
+        <div class="hero-acoes"><a class="botao botao-primario" href="./nova-transacao.html">Registrar movimentação <span aria-hidden="true">↗</span></a><a class="botao botao-secundario" href="#historico">Ver meu extrato <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-detalhe" aria-hidden="true"><span></span><span></span><span></span></div>
+      </section>
+      <section class="resumo" aria-labelledby="titulo-resumo">
+        <div class="secao-cabecalho"><div><p class="sobretitulo">VISÃO GERAL</p><h2 id="titulo-resumo">Sua saúde financeira</h2></div><button class="botao botao-atualizar" id="atualizar" type="button">↻ Atualizar</button></div>
+        <p class="aviso" id="mensagem" role="status" aria-live="polite">Carregando informações...</p>
+        <div class="metricas" aria-label="Métricas calculadas pelo sistema">
+          <article class="metrica metrica-principal"><div class="metrica-topo"><span>Saldo total</span><span class="metrica-icone" aria-hidden="true">↗</span></div><strong id="saldoTotal" class="numero" aria-label="Saldo total">—</strong><p>Receitas menos despesas</p></article>
+          <article class="metrica"><div class="metrica-topo"><span>Total de despesas</span><span class="metrica-icone" aria-hidden="true">↘</span></div><strong id="totalDespesas" class="numero" aria-label="Total de despesas">—</strong><p>Todos os gastos registrados</p></article>
+          <article class="metrica metrica-impulso"><div class="metrica-topo"><span>Gastos por impulso</span><span class="metrica-icone" aria-hidden="true">!</span></div><strong id="totalGastoImpulso" class="numero" aria-label="Total gasto por impulso">—</strong><p>Compras que merecem reflexão</p></article>
+        </div>
+      </section>
+      <section class="educacao" aria-label="Dica sobre consumo consciente"><div class="educacao-icone" aria-hidden="true">✳</div><div><strong>Consumir com intenção muda tudo.</strong><p>Acompanhar os gastos por impulso ajuda a fazer escolhas melhores. Um passo de cada vez.</p></div><span class="ods">ODS 12</span></section>
+      <section class="historico-secao" id="historico" aria-labelledby="titulo-historico"><div class="secao-cabecalho"><div><p class="sobretitulo">SUAS MOVIMENTAÇÕES</p><h2 id="titulo-historico">Extrato recente</h2></div><a class="link-texto" href="./nova-transacao.html">Adicionar +</a></div><div class="historico-card"><ul class="historico-lista" id="listaTransacoes" aria-live="polite"><li class="estado-vazio">Buscando lançamentos...</li></ul></div></section>
+    </main>
+    <footer class="rodape"><span>Clareza · Controle Financeiro Pessoal</span><span>Uma escolha consciente por dia.</span></footer>
+  </div>
+</body>
+</html>

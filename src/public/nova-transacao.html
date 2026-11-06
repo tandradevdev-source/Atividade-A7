@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b44">
+  <title>Nova transação | Clareza</title>
+  <link rel="stylesheet" href="./assets/css/estilos.css">
+  <script type="module" src="./assets/js/nova-transacao.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar"><a class="marca" href="./index.html" aria-label="Clareza - Página inicial"><span class="marca-simbolo" aria-hidden="true">C.</span><span>clareza<span class="marca-ponto">.</span></span></a><a class="nav-pill nav-voltar" href="./index.html"><span aria-hidden="true">←</span> Voltar ao painel</a></header>
+    <main class="pagina-formulario">
+      <div class="voltar-pequeno"><a href="./index.html">← Voltar para o painel</a></div>
+      <section class="cabecalho-formulario"><p class="sobretitulo">ORGANIZE SEU DIA A DIA</p><h1>Registrar <em>movimentação.</em></h1><p>Preencha os dados abaixo para adicionar uma receita ou despesa ao seu controle financeiro.</p></section>
+      <div class="duas-colunas">
+        <section class="cartao-formulario" aria-labelledby="titulo-formulario">
+          <div class="cartao-formulario-titulo"><span class="passo-numero">01</span><h2 id="titulo-formulario">Dados da transação</h2></div>
+          <form id="formTransacao" novalidate>
+            <div class="campo"><label for="descricao">Descrição <span aria-hidden="true">*</span></label><input id="descricao" name="descricao" type="text" maxlength="150" placeholder="Ex.: Supermercado da semana" autocomplete="off" required><small>Como você identifica essa movimentação?</small></div>
+            <div class="campos-lado-a-lado"><div class="campo"><label for="valor">Valor (R$) <span aria-hidden="true">*</span></label><input id="valor" name="valor" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="0,00" required></div><div class="campo"><label for="categoria">Categoria <span aria-hidden="true">*</span></label><input id="categoria" name="categoria" type="text" maxlength="80" list="sugestoes-categorias" placeholder="Ex.: Alimentação" required><datalist id="sugestoes-categorias"><option value="Moradia"></option><option value="Alimentação"></option><option value="Educação"></option><option value="Transporte"></option><option value="Lazer"></option><option value="Trabalho"></option><option value="Saúde"></option><option value="Outros"></option></datalist></div></div>
+            <fieldset class="grupo-radio"><legend>Tipo de movimentação <span aria-hidden="true">*</span></legend><div class="opcoes"><label class="opcao"><input type="radio" name="tipo" value="receita" required><span class="opcao-cartao"><span class="opcao-simbolo receita" aria-hidden="true">↗</span><strong>Receita</strong><small>Dinheiro que entra</small></span></label><label class="opcao"><input type="radio" name="tipo" value="despesa" required><span class="opcao-cartao"><span class="opcao-simbolo despesa" aria-hidden="true">↘</span><strong>Despesa</strong><small>Dinheiro que sai</small></span></label></div></fieldset>
+            <fieldset class="grupo-radio"><legend>Como você avalia esse gasto? <span aria-hidden="true">*</span></legend><p class="legenda-grupo">Classifique a transação para refletir sobre seus hábitos de consumo.</p><div class="opcoes"><label class="opcao"><input type="radio" name="consumoConsciente" value="true" required><span class="opcao-cartao"><span class="opcao-simbolo receita" aria-hidden="true">✓</span><strong>Consciente / essencial</strong><small>Gasto planejado</small></span></label><label class="opcao"><input type="radio" name="consumoConsciente" value="false" required><span class="opcao-cartao"><span class="opcao-simbolo despesa" aria-hidden="true">!</span><strong>Por impulso</strong><small>Gasto não planejado</small></span></label></div></fieldset>
+            <p id="feedback" class="feedback" role="status" aria-live="polite" hidden></p>
+            <div class="acoes-formulario"><button id="salvar" type="submit" class="botao botao-primario botao-salvar">Salvar transação <span aria-hidden="true">↗</span></button><a href="./index.html" class="botao botao-neutro">Cancelar</a></div>
+          </form>
+        </section>
+        <aside class="coluna-ajuda"><div class="dica-card"><span class="dica-numero">DICA 01 — EDUCAÇÃO FINANCEIRA</span><h3>Registrar é o primeiro passo para mudar.</h3><p>Quando você acompanha cada entrada e saída, fica mais fácil identificar onde é possível economizar.</p><div class="dica-linha" aria-hidden="true"></div><p class="dica-final">O futuro começa com escolhas pequenas.</p></div><div class="mini-ods">✳ Ferramenta alinhada ao consumo responsável (ODS 12).</div></aside>
+      </div>
+    </main>
+    <footer class="rodape"><span>Clareza · Controle Financeiro Pessoal</span><span>Uma escolha consciente por dia.</span></footer>
+  </div>
+</body>
+</html>

@@ -1,6 +1,9 @@
 import { Controller, Get } from '@nestjs/common';
+
 @Controller()
 export class AppController {
-  @Get()
-  olaMundo(): string { return 'Hello World!'; }
+  @Get('saude')
+  verificar(): { status: string } {
+    return { status: 'API online' };
+  }
 }
